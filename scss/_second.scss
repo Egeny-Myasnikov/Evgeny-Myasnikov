@@ -1,0 +1,63 @@
+.second{
+    margin-top: 100px;
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        .item{
+            display: grid;
+            align-content: space-between;
+            width: 300px;
+            height: 370px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: $trans03;
+            &:hover{
+            box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-20px);
+            transition: $trans03;
+            cursor: pointer;
+            }
+            &:nth-child(1){
+                background: $firstColor;
+            }
+            &:nth-child(2){
+                background: $secondColor;
+            }
+            &:nth-child(3){
+                background: $forthColor;
+            }
+            &-title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.7094em;
+                &-svg{
+                    fill: transparent;
+                    stroke:$blackColor;
+                    width: 70px;
+                    &__catalog{
+                        stroke-width: 2px;
+                        fill: $blackColor;
+                    }
+                    &__cart{
+                        fill: $blackColor;
+                    }
+                }
+                
+            }
+            &-descr{
+                    font-weight: bold;
+            }
+            &-btn{
+            margin-top: 70px;
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

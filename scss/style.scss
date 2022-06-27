@@ -1,0 +1,161 @@
+@import "fonts";
+@import "vars";
+@import "header";
+@import "first";
+@import "second";
+@import "portfolio";
+@import "contacts";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    color: $blackColor;
+}
+
+button {
+    color: $blackColor;
+}
+
+a {
+    text-decoration: none;
+    color: $blackColor;
+}
+
+.vk {
+    fill: #0085FF;
+}
+
+.whatsapp {
+    fill: #00FF38;
+}
+
+.telegram {
+    fill: #00D1FF;
+}
+
+.link {
+
+    transition: color $trans05;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 0%;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        transition: width $trans03;
+    }
+
+
+    &:hover {
+        color: #000;
+        transition: color $trans05;
+
+        &::after {
+            width: 80%;
+            transition: width $trans03;
+        }
+
+    }
+}
+
+.page-title {
+    font-size: 2.2em;
+    position: relative;
+    margin-bottom: 50px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        width: 80%;
+        height: 2px;
+        background-color: $blackColor;
+
+    }
+}
+
+.btn-primary {
+    border-radius: 10px;
+    background-color: $thirdColor;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    padding-right: 12%;
+    color: $whiteColor;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .3);
+    transition: $trans03;
+
+    &::after {
+        content: "";
+        background-color: $whiteColor;
+        width: 20px;
+        height: 1px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transition: $trans03;
+
+    }
+
+    &:hover::after {
+        width: 40px;
+        transition: $trans03;
+    }
+}
+
+.btn-secondary {
+    font-size: 1.2em;
+    border: none;
+    background-color: transparent;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: $trans03;
+
+    &:hover,
+    &.active {
+        background-color: $forthColor;
+        transition: $trans03;
+
+    }
+}
+input[type="tel"]{
+    padding: 10px;  
+    border-radius: 10px;
+    border:none;
+    outline: none;
+    &::placeholder{
+        color: rgb(200, 200, 200);
+    }
+}
+input[type="checkbox"]{
+    margin: 0 10px;
+}
+
+.wrapper {
+    background: linear-gradient(45deg, $firstColor, $secondColor);
+    width: 100%;
+}
+
+.__container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+// contacts
+

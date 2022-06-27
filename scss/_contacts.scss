@@ -1,0 +1,62 @@
+.contacts {
+    margin-top: 100px;
+    padding-bottom: 100px;
+
+    .contact {
+        display: flex;
+        justify-content: space-between;
+
+        &-me {
+            width: 50%;
+
+            &-phone {
+                margin: 20px 0 20px 30px;
+            }
+
+            &-soc {
+                display: grid;
+                grid-gap: 10px;
+
+                .item {
+                    width: 50%;
+                    background-color: #fff;
+                    position: relative;
+                    border-radius: 30px;
+                    &-link {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 10px;
+                        width: 100%;
+                        svg {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        &-form {
+            padding: 20px;
+            width: 50%;
+            display: grid;
+            grid-gap: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            form{
+                display: grid;
+            grid-gap: 10px;
+            .input-tel{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            }
+
+        }
+    }
+}
