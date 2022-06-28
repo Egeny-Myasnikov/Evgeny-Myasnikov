@@ -17,6 +17,9 @@ body {
     font-family: 'Montserrat';
     font-size: 16px;
     color: $blackColor;
+    @media screen and(max-width:400px) {
+    font-size: 12px;   
+    }
 }
 
 button {
