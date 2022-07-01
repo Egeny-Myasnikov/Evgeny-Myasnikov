@@ -79,12 +79,16 @@
                         }
 
                     &__catalog {
-                        stroke-width: 2px;
-                        fill: $blackColor;
+                        // stroke-width: 2px;
+                        stroke: $thirdColor;
+                        fill: $thirdColor;
                     }
 
                     &__cart {
-                        fill: $blackColor;
+                        fill: $thirdColor;
+                    }
+                    &__target {
+                        fill: $thirdColor;
                     }
                 }
 

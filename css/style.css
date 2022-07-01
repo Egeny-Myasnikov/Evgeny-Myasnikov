@@ -29,7 +29,7 @@
 .header .logo {
   width: 80px;
   height: 80px;
-  background-color: #a900c5;
+  background-color: #493CA6;
   border-radius: 10px;
   padding: 10px;
   display: grid;
@@ -107,7 +107,7 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  fill: #2f2f2f;
+  fill: #493CA6;
 }
 @media screen and (max-width: 769px) {
   .header-phone-svg {
@@ -172,7 +172,7 @@
   opacity: 0.5;
 }
 .header-social-svg {
-  fill: #333;
+  fill: #493CA6;
   position: absolute;
   left: 0;
   top: 0;
@@ -249,13 +249,13 @@
   cursor: pointer;
 }
 .second-list .item:nth-child(1) {
-  background: #f4b0ff;
+  background: #FFF6D3;
 }
 .second-list .item:nth-child(2) {
-  background: #bac9ff;
+  background: #B5D5FF;
 }
 .second-list .item:nth-child(3) {
-  background: #d6ffe1;
+  background: #C1B9FF;
 }
 .second-list .item-title {
   display: flex;
@@ -274,11 +274,14 @@
   }
 }
 .second-list .item-title-svg__catalog {
-  stroke-width: 2px;
-  fill: #2f2f2f;
+  stroke: #493CA6;
+  fill: #493CA6;
 }
 .second-list .item-title-svg__cart {
-  fill: #2f2f2f;
+  fill: #493CA6;
+}
+.second-list .item-title-svg__target {
+  fill: #493CA6;
 }
 .second-list .item-descr {
   font-weight: bold;
@@ -483,7 +486,7 @@ a {
 
 .btn-primary {
   border-radius: 10px;
-  background-color: #a900c5;
+  background-color: #493CA6;
   padding: 15px 30px;
   font-size: 1.2em;
   padding-right: 12%;
@@ -519,7 +522,7 @@ a {
   transition: 0.3s linear;
 }
 .btn-secondary:hover, .btn-secondary.active {
-  background-color: #d6ffe1;
+  background-color: #C1B9FF;
   transition: 0.3s linear;
 }
 
@@ -544,7 +547,7 @@ input[type=checkbox] {
 }
 
 .wrapper {
-  background: linear-gradient(45deg, #f4b0ff, #bac9ff);
+  background: linear-gradient(45deg, #FFF6D3, #B5D5FF);
   width: 100%;
 }
 
