@@ -1,0 +1,16 @@
+@media screen and(max-width:700px) {
+    .contacts .contact{
+        flex-wrap: wrap;
+        &-me {
+            width: 100%;
+        }
+        &-form {
+            width: 100%;
+        }
+    }
+}
+@media screen and(max-width:900px) {
+   .contacts .contact-me-soc .item {
+        width: 100%;
+    }
+}

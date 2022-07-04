@@ -1,0 +1,54 @@
+@media screen and(max-width:769px) {
+    .header {
+        font-size: .7em;
+
+        & .logo {
+            width: 40px;
+            height: 40px;
+            padding: 5px 7px;
+
+            &-svg {
+                width: 110%;
+                height: 110%;
+            }
+
+            &-title {
+                font-size: .4em;
+            }
+        }
+
+        &-navigation {
+            gap: 15px;
+        }
+
+        &-phone-svg {
+            left: -20px;
+            width: 15px;
+            height: 15px;
+        }
+
+        &-social {
+
+            width: 30px;
+            height: 30px;
+        }
+
+    }
+}
+
+@media screen and(max-width:520px) {
+    .header-navigation {
+        display: flex;
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+}
+
+@media screen and(max-width:400px) {
+    .header {
+        font-size: 1em;
+    }
+}

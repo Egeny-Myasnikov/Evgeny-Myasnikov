@@ -1,10 +1,13 @@
 @import "fonts";
 @import "vars";
-@import "header";
-@import "first";
-@import "second";
-@import "portfolio";
-@import "contacts";
+@import "header/header";
+@import "header/_a_header";
+@import "first/first";
+@import "second/second";
+@import "second/_a_second";
+@import "portfolio/portfolio";
+@import "contacts/contacts";
+@import "contacts/_a_contacts";
 
 * {
     padding: 0;
