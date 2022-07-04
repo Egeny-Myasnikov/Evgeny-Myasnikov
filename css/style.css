@@ -133,7 +133,7 @@
 
 @media screen and (max-width: 769px) {
   .header {
-    font-size: 0.7em;
+    font-size: 1em;
   }
   .header .logo {
     width: 40px;
@@ -145,7 +145,7 @@
     height: 110%;
   }
   .header .logo-title {
-    font-size: 0.4em;
+    font-size: 0.3em;
   }
   .header-navigation {
     gap: 15px;
@@ -160,7 +160,7 @@
     height: 30px;
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 650px) {
   .header-navigation {
     display: flex;
     position: absolute;
@@ -407,7 +407,7 @@ body {
 }
 @media screen and (max-width: 400px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 

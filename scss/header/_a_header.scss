@@ -1,6 +1,6 @@
 @media screen and(max-width:769px) {
     .header {
-        font-size: .7em;
+        font-size: 1em;
 
         & .logo {
             width: 40px;
@@ -13,7 +13,7 @@
             }
 
             &-title {
-                font-size: .4em;
+                font-size: .3em;
             }
         }
 
@@ -36,7 +36,7 @@
     }
 }
 
-@media screen and(max-width:520px) {
+@media screen and(max-width:650px) {
     .header-navigation {
         display: flex;
         position: absolute;
