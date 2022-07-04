@@ -1,0 +1,25 @@
+@media screen and(max-width:1200px) {
+    .first{
+        
+    }
+.first-container{
+    flex-direction:row-reverse;
+     .left-col {
+        width: 100%;
+    }
+     .right-col {
+        position: absolute;
+        width: 100%;
+        // background-color: #fff;
+        left: 0;
+        right: 0;
+        
+        img{
+            object-fit: cover;
+            width: 100%;
+            opacity: .1;
+           
+        }
+    }
+}
+}

@@ -2,9 +2,11 @@
     margin-top: 150px;
     &-container{
         display: flex;
+        flex-direction: row-reverse;
         gap: 20px;
     }
 }
 .page-description{
     margin: 50px 0;
+    display: block;
 }

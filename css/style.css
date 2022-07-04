@@ -180,13 +180,35 @@
 }
 .first-container {
   display: flex;
+  flex-direction: row-reverse;
   gap: 20px;
 }
 
 .page-description {
   margin: 50px 0;
+  display: block;
 }
 
+@media screen and (max-width: 1200px) {
+  .first-container {
+    flex-direction: row-reverse;
+  }
+  .first-container .left-col {
+    width: 100%;
+  }
+  .first-container .right-col {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .first-container .right-col img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    opacity: 0.1;
+  }
+}
 .second {
   margin-top: 100px;
 }
@@ -404,6 +426,7 @@ body {
   font-family: "Montserrat";
   font-size: 16px;
   color: #2f2f2f;
+  line-height: 1.5;
 }
 @media screen and (max-width: 400px) {
   body {
