@@ -1,0 +1,10 @@
+.phone {
+    display: flex;
+    gap: 10px;
+
+    &-svg {
+        width: 18px;
+        height: 18px;
+        fill: $thirdColor;
+    }
+}

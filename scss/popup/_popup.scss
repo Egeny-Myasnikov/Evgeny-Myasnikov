@@ -1,0 +1,87 @@
+@import "../UI/btnClose";
+
+.popup {
+    position: fixed;
+    z-index: 20000;
+    display: grid;
+    opacity: 0;
+    visibility: hidden;
+    place-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: $whiteColor;
+    transition: $trans03;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transition: $trans03;
+    }
+
+
+    &-wrap {
+        width: 50vw;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        display: grid;
+        grid-template-columns: auto 40px;
+
+        @media screen and (max-width:1050px) {
+            width: 70vw;
+        }
+
+        @media screen and (max-width:710px) {
+            width: 80vw;
+        }
+
+        @media screen and (max-width:400px) {
+            width: 90vw;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
+        .ui__btn-close {
+            transform: translate(180%, -120%);
+
+            @media screen and (max-width:400px) {
+                transform: translate(140%, -90%);
+
+            }
+        }
+
+        .title {
+            padding: 5px 0;
+            margin-bottom: 30px;
+            color: $secondColor;
+            border-bottom: 1px solid $secondColor;
+        }
+
+        .content {
+            font-size: 1em;
+            grid-column: 1/-1;
+
+            &-collback {
+                display: grid;
+                gap: 35px;
+
+                .phone {
+                    color: $whiteColor;
+
+                    &-svg {
+                        fill: $whiteColor;
+                    }
+                }
+
+                .link::after {
+                    background-color: $whiteColor;
+                }
+            }
+        }
+    }
+
+
+
+}

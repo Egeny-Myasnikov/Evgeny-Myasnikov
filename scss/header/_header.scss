@@ -42,7 +42,7 @@
         justify-content: space-between;
         align-items: center;
         gap: 30px;
-        
+
         .nav-link {
             font-size: 1em;
             font-weight: medium;
@@ -60,18 +60,7 @@
         }
     }
 
-    &-phone {
-        display: flex;
-        position: relative;
 
-        &-svg {
-            left: -30px;
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            fill: $thirdColor;
-        }
-    }
 
     &-social {
         width: 40px;
@@ -79,7 +68,7 @@
         position: relative;
 
         &.active &-content {
-            transform:translateY(0);
+            transform: translateY(0);
             width: 200%;
             height: 150px;
             padding: 10px 10px;
@@ -108,7 +97,7 @@
 
         &-content {
             display: grid;
-            transform:translateY(-1000%);
+            transform: translateY(-1000%);
             margin-left: -50%;
             margin-top: 120%;
             width: 0%;
