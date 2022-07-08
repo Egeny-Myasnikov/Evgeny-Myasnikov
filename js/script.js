@@ -10,6 +10,7 @@ class Popup {
   constructor(title, content) {
     this.title = title;
     this.content = content;
+    this.wrapper = document.querySelector(".wrapper");
     this.popupTitle = document.querySelector(".popup .title");
     this.popupContent = document.querySelector(".popup .content");
     this.popup = document.querySelector(".popup");
@@ -21,9 +22,28 @@ class Popup {
     console.log(this.popupContent);
     console.log(this.content);
   }
+  _createElem(selector, className) {
+    const elem = document.createElement(selector);
+    className && elem.classList.add(className);
+    return elem;
+  }
+  _createPopup() {
+    const popup = this._createElem("div", "popup");
+    const popupWrap = this._createElem("div", "popup-wrap");
+    const title = this._createElem("h3", "title");
+    z;
+    const btnClose = this._createElem("span", "ui__btn-close");
+    const content = this._createElem("div", "content");
+    title.textContent = this.title;
+    content.innerHTML = this.content;
+    popupWrap.append(title, btnClose, content);
+    popup.append(popupWrap);
+    this.wrapper.insertAdjacentElement("afterbegin", popup);
+  }
   _mountBody() {
-    this.popupTitle.textContent = this.title;
-    this.popupContent.innerHTML = this.content;
+    // this.popupTitle.textContent = this.title;
+    // this.popupContent.innerHTML = this.content;
+    this.wrapper.insertAdjacentHTML("afterbegin", this._createPopup());
   }
   _unMountBody() {
     this.popupTitle.textContent = "";
@@ -43,9 +63,9 @@ class Popup {
     });
   }
   open() {
+    this._createPopup();
     this.popup.classList.add("active");
     document.body.style.overflow = "hidden";
-    this._mountBody();
     this.close();
   }
 }
@@ -70,12 +90,6 @@ const popupCollBack = new Popup(
 </form>
 </div>`
 );
-
-// popupCollBack.close();
-
-// document
-//   .querySelector(".ui__btn-close")
-//   .addEventListener("click", () => popupCollBack.close());
 document
   .querySelector(".js-get-consultation")
   .addEventListener("click", () => popupCollBack.open());
