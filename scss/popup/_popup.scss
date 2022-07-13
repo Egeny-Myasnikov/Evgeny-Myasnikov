@@ -19,6 +19,12 @@
         transition: $trans03;
     }
 
+    &.active &-wrap {
+        transform: scale(1);
+        transition: $trans03;
+        transition-delay: .3s;
+    }
+
 
     &-wrap {
         width: 50vw;
@@ -28,6 +34,8 @@
         backdrop-filter: blur(5px);
         display: grid;
         grid-template-columns: auto 40px;
+        transform: scale(0);
+        transition: $trans03;
 
         @media screen and (max-width:1050px) {
             width: 70vw;
@@ -62,23 +70,23 @@
         .content {
             font-size: 1em;
             grid-column: 1/-1;
+            display: grid;
+            gap: 35px;
 
-            &-collback {
-                display: grid;
-                gap: 35px;
 
-                .phone {
-                    color: $whiteColor;
 
-                    &-svg {
-                        fill: $whiteColor;
-                    }
-                }
+            .phone {
+                color: $whiteColor;
 
-                .link::after {
-                    background-color: $whiteColor;
+                &-svg {
+                    fill: $whiteColor;
                 }
             }
+
+            .link::after {
+                background-color: $whiteColor;
+            }
+
         }
     }
 

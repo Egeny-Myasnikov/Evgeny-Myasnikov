@@ -1,6 +1,7 @@
 @font-face {
   font-family: Montserrat;
   src: url(/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+  font-display: swap;
 }
 .gearMail {
   transition: 0.5s linear;
@@ -452,6 +453,11 @@
   visibility: visible;
   transition: 0.3s linear;
 }
+.popup.active .popup-wrap {
+  transform: scale(1);
+  transition: 0.3s linear;
+  transition-delay: 0.3s;
+}
 .popup-wrap {
   width: 50vw;
   padding: 20px;
@@ -461,6 +467,8 @@
           backdrop-filter: blur(5px);
   display: grid;
   grid-template-columns: auto 40px;
+  transform: scale(0);
+  transition: 0.3s linear;
 }
 @media screen and (max-width: 1050px) {
   .popup-wrap {
@@ -496,18 +504,16 @@
 .popup-wrap .content {
   font-size: 1em;
   grid-column: 1/-1;
-}
-.popup-wrap .content-collback {
   display: grid;
   gap: 35px;
 }
-.popup-wrap .content-collback .phone {
+.popup-wrap .content .phone {
   color: #fafafa;
 }
-.popup-wrap .content-collback .phone-svg {
+.popup-wrap .content .phone-svg {
   fill: #fafafa;
 }
-.popup-wrap .content-collback .link::after {
+.popup-wrap .content .link::after {
   background-color: #fafafa;
 }
 

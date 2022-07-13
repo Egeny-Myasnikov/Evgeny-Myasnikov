@@ -1,3 +1,5 @@
+import phoneInputMask from "./phoneMask.module.js";
+
 function hideShowSocialIcons(selector) {
   const elem = document.querySelector(selector);
   elem.addEventListener("click", () => {
@@ -10,9 +12,7 @@ const popups = {
   consultation: {
     title: "Консультация",
     body: `
-    <div class="content-collback">
     <h4>Позвоните мне по телефону</h4>
-
 <a href="tel:+79501081773" title="Позвонить" class="phone link">
     <svg class="phone-svg">
         <use xlink:href="assets/svg/icons.svg#phone"></use>
@@ -20,40 +20,32 @@ const popups = {
     +7 (950) 108-17-73
 </a>
 <h4>Или оставьте свой и я перезвоню Вам в течении 5 - 15 минут</h4>
-
 <form class="ui__form-collback">
-   <input type="tel" class="input-tel" placeholder="+7(950) 108-17-73">
+   <input type="tel" data-input-phone class="input-tel" placeholder="+7(950) 108-17-73">
    <label for="agreement"><input type="checkbox" name="agreement" id="agreement" checked>Я согласен на обработку персональных данных</label> 
    <button class="btn-primary" type="submit">Отправить</button>
-</form>
-</div>`,
+</form>`,
   },
   lending: {
     title: "Лендиг",
     body: `
-    <div class="content-collback">
     <h4>Лендинг (Lending Page)</h4>
     <p>Целевя промостраница для продвижения товара или услуги</p>
-    <button class="btn-primary" type="submit">Заказать</button>
-    </div>`,
+    <button class="btn-primary" type="submit">Заказать</button>`,
   },
   catalog: {
     title: "Каталог",
     body: `
-    <div class="content-collback">
     <h4>Сайт Каталог</h4>
     <p>Сайт с возможностью демонстрации каталога продукции</p>
-    <button class="btn-primary" type="submit">Заказать</button>
-    </div>`,
+    <button class="btn-primary" type="submit">Заказать</button>`,
   },
   shop: {
     title: "Интернет магазин",
     body: `
-    <div class="content-collback">
     <h4>Интернет магазин</h4>
     <p>Современный интернет-магазин с возможностью оплаты товаров онлайн</p>
-    <button class="btn-primary" type="submit">Заказать</button>
-    </div>`,
+    <button class="btn-primary" type="submit">Заказать</button>`,
   },
 };
 
@@ -98,7 +90,7 @@ class Popup {
         document.body.removeAttribute("style");
         setTimeout(() => {
           this.popup.remove();
-        }, 1000);
+        }, 300);
       }
     });
   }
@@ -126,6 +118,7 @@ class PopupFilling extends Popup {
   }
   _addBody() {
     this.content.insertAdjacentHTML("afterbegin", this.propety.body);
+    phoneInputMask();
   }
 }
 
@@ -156,3 +149,5 @@ document
   .querySelector(".js-catalog")
   .addEventListener("click", () => catalog.open());
 document.querySelector(".js-shop").addEventListener("click", () => shop.open());
+
+phoneInputMask();
