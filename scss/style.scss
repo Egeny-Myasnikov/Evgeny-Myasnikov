@@ -13,6 +13,8 @@
 @import "popup/_a_popup";
 @import "UI/contactForms";
 @import "UI/_phone";
+@import "UI/_btns";
+@import "pages/singlePortfolioPage/singlePortfolioPage";
 
 
 * {
@@ -125,53 +127,7 @@ h4 {
     }
 }
 
-.btn-primary {
-    border-radius: 10px;
-    background-color: $thirdColor;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    padding-right: 12%;
-    color: $whiteColor;
-    border: none;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, .3);
-    transition: $trans03;
 
-    &::after {
-        content: "";
-        background-color: $whiteColor;
-        width: 20px;
-        height: 1px;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transition: $trans03;
-
-    }
-
-    &:hover::after {
-        width: 40px;
-        transition: $trans03;
-    }
-}
-
-.btn-secondary {
-    font-size: 1.2em;
-    border: none;
-    background-color: transparent;
-    padding: 8px 14px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: $trans03;
-
-    &:hover,
-    &.active {
-        background-color: $forthColor;
-        transition: $trans03;
-
-    }
-}
 
 input[type="tel"] {
     padding: 10px;

@@ -8,8 +8,10 @@ import openingPopup, {
 
 function hideShowSocialIcons(selector) {
   const elem = document.querySelector(selector);
-  elem.addEventListener("click", () => {
-    elem.classList.toggle("active");
+  document.addEventListener("click", (e) => {
+    e.target.closest(selector)
+      ? elem.classList.toggle("active")
+      : elem.classList.remove("active");
   });
 }
 
